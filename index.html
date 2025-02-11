@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="email_icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="video-container">
+            <video autoplay muted loop class="video">
+                <source id="vid" src="bg2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Welcome message -->
+        <div class="welcome-section">
+            <h1 class="welcome-message">Welcome to Our Contact Page</h1>
+            <p class="welcome-text">We’d love to hear from you! Please fill out the form below, and we’ll get back to you as soon as possible.</p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="message-container">
+            <input type="hidden" name="access_key" value="d45e1312-783c-4732-a2c0-cccbc8d5c73f">
+
+            <input type="text" id="nameid" name="name" placeholder="Name" required>
+            <input type="email" id="emailid" name="email" placeholder="Email" required>
+            <input type="text" id="subjectid" name="subject" placeholder="Subject" required>
+            <textarea id="messageid" name="message" rows="10" placeholder="Enter your message" required></textarea>
+
+            <button type="submit" class="send">Send</button>
+        </form>
+
+    </div>
+    
+</body>
+</html>
