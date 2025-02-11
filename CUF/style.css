@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    font-family: 'Playfair Display', serif;
+}
+
+/* Style the video container to fill the screen */
+.video-container {
+    position: absolute; /* Allow full control over placement */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place the video behind other elements */
+}
+
+/* Style the video element */
+.video {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%; /* Ensure the video covers width */
+    min-height: 100%; /* Ensure the video covers height */
+    object-fit: cover; /* Maintain aspect ratio and crop excess */
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    width: 100%;
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+    padding: 20px; /* Add some spacing around */
+}
+
+/* Welcome section styling */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a subtle text shadow */
+}
+
+.welcome-message {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    font-size: 1.2em;
+    color: #ffffff;
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Message container (form background) */
+.message-container {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements inside the container */
+    text-align: center;
+    color: #ffffff;
+    background: rgba(232, 223, 223, 0.2);
+    backdrop-filter: blur(8px);
+    border: 0.5rem solid #b2b5bf;
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Form element styling */
+form {
+    width: 100%;
+}
+
+input::placeholder, textarea::placeholder{
+    color: rgba(232, 223, 223, 0.5);
+}
+
+/* Input fields styling */
+#nameid, #emailid, #subjectid {
+    height: 2rem;
+    min-width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+}
+
+#messageid {
+    height: 10rem;
+    min-width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f7921f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Playfair Display', serif;
+}
+
+button:hover {
+    background-color: #de5d16;
+}
+
+@media (min-width: 768px) {
+    .message-container {
+        max-width: 100%; /* Prevent it from exceeding the page width */
+    }
+}
